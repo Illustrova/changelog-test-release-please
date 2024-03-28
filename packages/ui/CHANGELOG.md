@@ -1,9 +1,3 @@
-### [0.7.39](https://github.com/some/url/compare/v0.7.38...v0.7.39) (2020-11-19)
-
-### Changes
-
-- **styles:** add .panel-shadow class ([3b00f93](https://github.com/some/url/commit/3b00f9363b0f60d510bf42a9835e63b1b463e2de))
-
 ## [1.1.0](https://github.com/Illustrova/changelog-test-release-please/compare/v1.0.0...v1.1.0) (2024-03-28)
 
 
@@ -17,6 +11,13 @@
 ### Bug Fixes
 
 * **button:** make text on button green ([3486676](https://github.com/Illustrova/changelog-test-release-please/commit/3486676276d1e224e83f7970a198bf89a98cf524))
+
+### [0.7.39](https://github.com/some/url/compare/v0.7.38...v0.7.39) (2020-11-19)
+
+### Changes
+
+- **styles:** add .panel-shadow class ([3b00f93](https://github.com/some/url/commit/3b00f9363b0f60d510bf42a9835e63b1b463e2de))
+
 
 ### [0.7.38](https://github.com/some/url/compare/v0.7.37...v0.7.38) (2020-10-14)
 
