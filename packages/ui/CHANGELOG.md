@@ -5,6 +5,13 @@
 
 * add input component with basic functionality ([88388f7](https://github.com/Illustrova/changelog-test-release-please/commit/88388f7df7fbda10d726e074d0f4eaa7c706dcfa))
 
+## [1.1.1](https://github.com/Illustrova/changelog-test-release-please/compare/v1.1.0...v1.1.1) (2024-03-28)
+
+
+### Bug Fixes
+
+* **input:** add type=password to TS definition ([7860bad](https://github.com/Illustrova/changelog-test-release-please/commit/7860bad957374608abc8754e2f9e9dde0897b51e))
+
 ## 1.0.0 (2024-03-28)
 
 
