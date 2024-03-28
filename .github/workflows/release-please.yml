@@ -1,0 +1,36 @@
+on:
+  push:
+    branches:
+      - dev
+    paths:
+      - 'packages/ui/**'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+name: release-please
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: google-github-actions/release-please-action@v4
+        id: release
+        with:
+          path: "packages/ui"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          release-type: "node"
+          config-file: packages/ui/release-please-config.json
+          target-branch: dev
+      
+      - name: Enable Pull Request auto merge
+        if: steps.release.outputs.prs_created == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          pr_number: "${{ steps.release.outputs.pr && toJSON(fromJSON(steps.release.outputs.pr).number) }}"
+          pr_title: '[UI] Automatic Release'
+        shell: bash
+        run:
+          gh pr merge -R ${{ github.repository }} --merge --auto ${{ env.pr_number }} -b "" -t '⇄ PR-#${{ env.pr_number  }} | ${{ env.pr_title }}'
+     

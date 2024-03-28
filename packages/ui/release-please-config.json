@@ -1,0 +1,50 @@
+{
+  "packages": {
+    "packages/ui": {
+      "changelog-sections": [
+        {
+          "type": "feat",
+          "section": "Features",
+          "hidden": false
+        },
+        {
+          "type": "fix",
+          "section": "Bug Fixes",
+          "hidden": false
+        },
+        {
+          "type": "chore",
+          "section": "Miscellaneous",
+          "hidden": false
+        },
+        {
+          "type": "perf",
+          "section": "Performance improvements",
+          "hidden": false
+        },
+        {
+          "type": "refactor",
+          "section": "Code refactoring",
+          "hidden": false
+        },
+        {
+          "type": "style",
+          "section": "Code style",
+          "hidden": false
+        },
+        {
+          "type": "docs",
+          "section": "Documentation",
+          "hidden": false
+        },
+        {
+          "type": "chore",
+          "section": "Chores",
+          "hidden": true
+        }
+      ]
+    }
+  },
+  "pull-request-footer": " ",
+  "pull-request-header": " "
+}
