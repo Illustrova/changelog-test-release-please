@@ -1,6 +1,12 @@
 {
+    "release-type": "node",
+    "tag-separator": "@",
+    "include-v-in-tag": false,
+    "pull-request-footer": " ",
+    "pull-request-header": " ",
   "packages": {
     "packages/ui": {
+      "component": "ui",
       "changelog-sections": [
         {
           "type": "feat",
@@ -44,7 +50,5 @@
         }
       ]
     }
-  },
-  "pull-request-footer": " ",
-  "pull-request-header": " "
+  }
 }
