@@ -4,6 +4,13 @@
 
 - **styles:** add .panel-shadow class ([3b00f93](https://github.com/some/url/commit/3b00f9363b0f60d510bf42a9835e63b1b463e2de))
 
+## [1.1.0](https://github.com/Illustrova/changelog-test-release-please/compare/v1.0.0...v1.1.0) (2024-03-28)
+
+
+### Features
+
+* add input component with basic functionality ([88388f7](https://github.com/Illustrova/changelog-test-release-please/commit/88388f7df7fbda10d726e074d0f4eaa7c706dcfa))
+
 ## 1.0.0 (2024-03-28)
 
 
