@@ -21,6 +21,7 @@ jobs:
           path: "packages/ui"
           token: ${{ secrets.GITHUB_TOKEN }}
           release-type: "node"
+          config-file: release-please-config.json
           target-branch: dev
           
       - name: Enable Pull Request auto merge
