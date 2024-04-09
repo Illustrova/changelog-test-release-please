@@ -2,8 +2,8 @@ on:
   push:
     branches:
       - dev
-    paths:
-      - 'packages/ui/**'
+    # paths:
+    #   - 'packages/ui/**'
 
 permissions:
   contents: write
