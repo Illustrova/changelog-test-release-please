@@ -2,9 +2,10 @@
     "release-type": "node",
     "tag-separator": "@",
     "include-v-in-tag": false,
+    "pull-request-title-pattern": "PLATFORM-888: Automatic release of ManyUI",
     "pull-request-footer": " ",
     "pull-request-header": " ",
-  "packages": {
+    "packages": {
     "packages/ui": {
       "component": "ui",
       "changelog-sections": [
@@ -31,11 +32,6 @@
         {
           "type": "refactor",
           "section": "Code refactoring",
-          "hidden": false
-        },
-        {
-          "type": "style",
-          "section": "Code style",
           "hidden": false
         },
         {
