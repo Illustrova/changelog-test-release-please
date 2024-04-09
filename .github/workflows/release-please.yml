@@ -15,6 +15,8 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
+      - name: Debug
+        run: ls
       - uses: google-github-actions/release-please-action@v4
         id: release
         with:
