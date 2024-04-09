@@ -1,5 +1,5 @@
 import React from "react";
 
 export const Checkbox = () => {
-  return <input type="checkbox" />;
+  return <input type="checkbox" style={{ color: "red" }} />;
 };
