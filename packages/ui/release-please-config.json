@@ -5,6 +5,7 @@
     "pull-request-title-pattern": "PLATFORM-888: Automatic release of ManyUI",
     "pull-request-footer": " ",
     "pull-request-header": " ",
+    "target-branch": "dev",
     "packages": {
     "packages/ui": {
       "component": "ui",
