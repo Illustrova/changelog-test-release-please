@@ -1,12 +1,12 @@
 {
-    "release-type": "node",
-    "tag-separator": "@",
-    "include-v-in-tag": false,
-    "pull-request-title-pattern": "PLATFORM-888: Automatic release of ManyUI",
-    "pull-request-footer": " ",
-    "pull-request-header": " ",
-    "target-branch": "dev",
-    "packages": {
+  "release-type": "node",
+  "tag-separator": "@",
+  "include-v-in-tag": false,
+  "pull-request-title-pattern": "PLATFORM-888: Automatic release of ManyUI",
+  "pull-request-footer": " ",
+  "pull-request-header": " ",
+  "target-branch": "dev",
+  "packages": {
     "packages/ui": {
       "component": "ui",
       "changelog-sections": [
@@ -46,6 +46,14 @@
           "hidden": true
         }
       ]
+    },
+    ".": {
+      "changelog-path": "CHANGELOG.md",
+      "bump-minor-pre-major": false,
+      "bump-patch-for-minor-pre-major": false,
+      "draft": false,
+      "prerelease": false
     }
-  }
+  },
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
 }
