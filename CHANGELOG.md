@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2](https://github.com/Illustrova/changelog-test-release-please/compare/v1.2.1...v1.2.2) (2024-04-13)
+
+
+### Bug Fixes
+
+* path to config ([eba1a98](https://github.com/Illustrova/changelog-test-release-please/commit/eba1a9821a23f8e2c5160c4160d29cda07f1ad1b))
+
 ## [1.2.1](https://github.com/Illustrova/changelog-test-release-please/compare/v1.2.0...v1.2.1) (2024-04-09)
 
 
