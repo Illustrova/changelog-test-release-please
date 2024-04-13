@@ -4,7 +4,7 @@
   "author": "Irina Illustrova",
   "description": "UI repo mock for testing changelog generation with Release-please workflow",
   "main": "src/index.ts",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "files": [
     "src"
   ],
