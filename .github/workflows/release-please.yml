@@ -22,8 +22,6 @@ jobs:
         with:
           # No other arguments should be used: https://github.com/google-github-actions/release-please-action/issues/941
           token: ${{ secrets.GITHUB_TOKEN }}
-          release-type: "node"
-          config-file: "packages/ui/release-please-config.json"
           
       - name: Enable Pull Request auto merge
         if: steps.release.outputs.prs_created == 'true'
