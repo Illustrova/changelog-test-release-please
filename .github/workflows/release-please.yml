@@ -46,6 +46,8 @@ jobs:
           echo "Closing and reopening PR to trigger checks"
           gh pr close ${{ fromJSON(steps.release.outputs.pr).number }} || true
           gh pr reopen ${{ fromJSON(steps.release.outputs.pr).number }} || true
-          gh pr merge --auto --merge ${{ fromJSON(steps.release.outputs.pr).number }} || true
+          gh pr merge --auto --merge ${{ fromJSON(steps.release.outputs.pr).number }} -b "" -t '⇄ PR-#${{ env.pr_number  }} | ${{ env.pr_title }}' || true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          pr_number: "${{ steps.release.outputs.pr && toJSON(fromJSON(steps.release.outputs.pr).number) }}"
+          pr_title: '[UI] Automatic Release'
