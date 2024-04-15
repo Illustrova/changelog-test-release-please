@@ -7,6 +7,13 @@
 
 * **button:** make green ([2f211e0](https://github.com/Illustrova/changelog-test-release-please/commit/2f211e0895f1139722d6209d079a15b387be16f9))
 
+## [1.4.2](https://github.com/Illustrova/changelog-test-release-please/compare/v1.4.1...v1.4.2) (2024-04-15)
+
+
+### Bug Fixes
+
+* **button:** make green ([2f211e0](https://github.com/Illustrova/changelog-test-release-please/commit/2f211e0895f1139722d6209d079a15b387be16f9))
+
 ## [1.4.1](https://github.com/Illustrova/changelog-test-release-please/compare/v1.4.0...v1.4.1) (2024-04-15)
 
 
