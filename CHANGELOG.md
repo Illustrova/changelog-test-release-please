@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.1](https://github.com/Illustrova/changelog-test-release-please/compare/v1.4.0...v1.4.1) (2024-04-15)
+
+
+### Bug Fixes
+
+* **button:** makered ([9c919d4](https://github.com/Illustrova/changelog-test-release-please/commit/9c919d445b5a463280aa9092f20640fd2b40f8cf))
+
 ## [1.4.0](https://github.com/Illustrova/changelog-test-release-please/compare/v1.3.3...v1.4.0) (2024-04-15)
 
 
