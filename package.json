@@ -1,6 +1,6 @@
 {
   "name": "changelog-test-release-please",
-  "version": "1.3.3",
+  "version": "1.4.0",
   "description": "Test repository for different types of changelog generator packages",
   "private": true,
   "license": "MIT",
