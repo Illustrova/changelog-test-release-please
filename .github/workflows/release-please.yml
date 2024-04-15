@@ -19,13 +19,14 @@ jobs:
       pull-requests: write
       id-token: write
     steps:
-      - uses: google-github-actions/release-please-action@v4
+      - uses: google-github-actions/release-please-action@v3
         id: release
         with:
           # No other arguments should be used: https://github.com/google-github-actions/release-please-action/issues/941
           token: ${{ secrets.GITHUB_TOKEN }}
           config-file: .github/release-please-config.json
           manifest-file: .github/.release-please-manifest.json
+          release-type: node
           
       # - uses: actions/checkout@v3
       # - name: Close, reopen and auto-merge PR, to trigger all necessary checks (https://github.com/googleapis/release-please/issues/922)
