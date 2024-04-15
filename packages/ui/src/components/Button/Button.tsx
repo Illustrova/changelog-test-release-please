@@ -8,7 +8,7 @@ type ButtonProps = {
 export const Button = (props: ButtonProps) => {
   const { children, ...rest } = props;
   return (
-    <button style={{ color: "red" }} {...rest}>
+    <button style={{ color: "green" }} {...rest}>
       {children}
     </button>
   );
