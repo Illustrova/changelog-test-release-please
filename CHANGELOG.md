@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.3.0](https://github.com/Illustrova/changelog-test-release-please/compare/v1.2.2...v1.3.0) (2024-04-15)
+
+
+### Features
+
+* add test action that should be triggered when auto pro is opened ([664dbb0](https://github.com/Illustrova/changelog-test-release-please/commit/664dbb0157e2b177626cd4396c4dd7b47aa7f2fe))
+
+
+### Bug Fixes
+
+* **button:** make red ([48b422a](https://github.com/Illustrova/changelog-test-release-please/commit/48b422aad5fe063166b559dcf0ba0ae0a669cb82))
+* **Button:** remove type ([6ec780f](https://github.com/Illustrova/changelog-test-release-please/commit/6ec780f815ba5472cf0efd01a5358445df3f5f26))
+* **checkbox:** make red ([1cf77a6](https://github.com/Illustrova/changelog-test-release-please/commit/1cf77a626f8bc5cca8bef1633e22883a285cc427))
+* config ([bb0139d](https://github.com/Illustrova/changelog-test-release-please/commit/bb0139d105bd6361990dc84c4a0e6d30cca95f6d))
+* **input:** colro blue ([17b7c58](https://github.com/Illustrova/changelog-test-release-please/commit/17b7c583092e797cf049649859072d8b5f05b681))
+* ove config ([189a41d](https://github.com/Illustrova/changelog-test-release-please/commit/189a41dddbe10749fdeb01c7d67d39b754d82dbd))
+* update release action ([c431ad3](https://github.com/Illustrova/changelog-test-release-please/commit/c431ad3620397e6513673da1c04d58e4d4b1121a))
+
 ## [1.2.2](https://github.com/Illustrova/changelog-test-release-please/compare/v1.2.1...v1.2.2) (2024-04-13)
 
 
