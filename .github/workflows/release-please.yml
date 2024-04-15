@@ -17,7 +17,7 @@ jobs:
     steps:
       - name: Debug
         run: ls
-      - uses: google-github-actions/release-please-action@v4
+      - uses: google-github-actions/release-please-action@v3
         id: release
         with:
           # No other arguments should be used: https://github.com/google-github-actions/release-please-action/issues/941
