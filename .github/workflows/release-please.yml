@@ -27,6 +27,7 @@ jobs:
           config-file: .github/release-please-config.json
           manifest-file: .github/.release-please-manifest.json
           release-type: node
+          pull-request-title-pattern: 'PLATFORM-888: Automatic release of ManyUI: ${scope} ${component} ${version}'
           
       # - uses: actions/checkout@v3
       # - name: Close, reopen and auto-merge PR, to trigger all necessary checks (https://github.com/googleapis/release-please/issues/922)
