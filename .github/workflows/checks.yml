@@ -1,0 +1,13 @@
+name: storybook
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  configure:
+    runs-on: ubuntu-latest
+    name: Test action
+    steps:
+      - run: echo "Hello, world!"
