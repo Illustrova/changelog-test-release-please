@@ -43,7 +43,7 @@ jobs:
           pull-request-number: ${{ env.pr_number }}
           merge-method: merge
           # to trigger other workflows, pass PAT token instead of GITHUB_TOKEN
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.CUSTOM_TOKEN }}
         env:      
           pr_number: "${{ steps.release.outputs.pr && toJSON(fromJSON(steps.release.outputs.pr).number) }}"
 
