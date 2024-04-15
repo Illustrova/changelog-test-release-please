@@ -5,5 +5,5 @@ type InputProps = {
 };
 
 export const Input = ({ type = "text", ...props }: InputProps) => {
-  return <input type={type} style={{ background: "yellow" }} {...props} />;
+  return <input type={type} style={{ background: "green" }} {...props} />;
 };
