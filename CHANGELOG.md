@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.2](https://github.com/Illustrova/changelog-test-release-please/compare/v1.3.1...v1.3.2) (2024-04-15)
+
+
+### Bug Fixes
+
+* **input:** make green ([9d9ca78](https://github.com/Illustrova/changelog-test-release-please/commit/9d9ca78a2e565bb6927edd24d96d556227d29df6))
+
 ## [1.3.1](https://github.com/Illustrova/changelog-test-release-please/compare/v1.3.0...v1.3.1) (2024-04-15)
 
 
