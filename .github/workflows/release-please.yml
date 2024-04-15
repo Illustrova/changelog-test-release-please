@@ -48,6 +48,6 @@ jobs:
           gh pr reopen ${{ fromJSON(steps.release.outputs.pr).number }} || true
           gh pr merge --auto --merge ${{ fromJSON(steps.release.outputs.pr).number }} -b "" -t '⇄ PR-#${{ env.pr_number  }} | ${{ env.pr_title }}' || true
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.CUSTOM_TOKEN }}
           pr_number: "${{ steps.release.outputs.pr && toJSON(fromJSON(steps.release.outputs.pr).number) }}"
           pr_title: '[UI] Automatic Release'
