@@ -25,7 +25,7 @@ jobs:
           config-file: release-please-config.json
           release-type: node
       - name: Close, reopen and auto-merge PR, to trigger all necessary checks (https://github.com/googleapis/release-please/issues/922)
-        if: steps.release.outputs.prs_created == 'true'
+        if: steps.release.outputs.pr
         env:
           GITHUB_TOKEN: ${{ secrets.CUSTOM_TOKEN }}
           pr_number: "${{ steps.release.outputs.pr && toJSON(fromJSON(steps.release.outputs.pr).number) }}"
