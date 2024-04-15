@@ -25,12 +25,12 @@ jobs:
           config-file: packages/ui/release-please-config.json
           manifest-file: packages/ui/.release-please-manifest.json
           release-type: node
-      - name: Close, reopen and auto-merge PR, to trigger all necessary checks (https://github.com/googleapis/release-please/issues/922)
-        if: steps.release.outputs.pr
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          pr_number: "${{ steps.release.outputs.pr && toJSON(fromJSON(steps.release.outputs.pr).number) }}"
-          pr_title: '[UI] Automatic Release'
-        shell: bash
-        run: |
-          gh pr merge -R ${{ github.repository }} --merge --auto ${{ env.pr_number }} -b "" -t '⇄ PR-#${{ env.pr_number  }} | ${{ env.pr_title }}'
+      # - name: Close, reopen and auto-merge PR, to trigger all necessary checks (https://github.com/googleapis/release-please/issues/922)
+      #   if: steps.release.outputs.pr
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     pr_number: "${{ steps.release.outputs.pr && toJSON(fromJSON(steps.release.outputs.pr).number) }}"
+      #     pr_title: '[UI] Automatic Release'
+      #   shell: bash
+      #   run: |
+      #     gh pr merge -R ${{ github.repository }} --merge --auto ${{ env.pr_number }} -b "" -t '⇄ PR-#${{ env.pr_number  }} | ${{ env.pr_title }}'
