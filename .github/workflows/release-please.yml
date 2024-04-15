@@ -39,6 +39,7 @@ jobs:
       #   shell: bash
       #   run: |
       #     gh pr merge -R ${{ github.repository }} --merge --auto ${{ env.pr_number }} -b "" -t '⇄ PR-#${{ env.pr_number  }} | ${{ env.pr_title }}'
+      - uses: actions/checkout@v3
       - name: Workaround for https://github.com/googleapis/release-please/issues/922
         if: ${{ steps.release.outputs.pr != '' }}    
         run: |
