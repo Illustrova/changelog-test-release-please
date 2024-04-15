@@ -24,13 +24,14 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           config-file: release-please-config.json
           
-      - name: Enable Pull Request auto merge
+      - name: Close, reopen and auto-merge PR, to trigger all necessary checks (https://github.com/googleapis/release-please/issues/922)
         if: steps.release.outputs.prs_created == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           pr_number: "${{ steps.release.outputs.pr && toJSON(fromJSON(steps.release.outputs.pr).number) }}"
           pr_title: '[UI] Automatic Release'
         shell: bash
-        run:
-          gh pr merge -R ${{ github.repository }} --merge --auto ${{ env.pr_number }} -b "" -t '⇄ PR-#${{ env.pr_number  }} | ${{ env.pr_title }}'
-     
+        run: |
+          gh pr close ${{ env.pr_number }} || true
+          gh pr reopen ${{ env.pr_number }} || true
+          gh pr merge -R ${{ github.repository }} --remove-label \"autorelease: pending\" --merge --auto ${{ env.pr_number }} -b "" -t '⇄ PR-#${{ env.pr_number  }} | ${{ env.pr_title }}'
