@@ -25,8 +25,7 @@ jobs:
           # No other arguments should be used: https://github.com/google-github-actions/release-please-action/issues/941
           token: ${{ secrets.GITHUB_TOKEN }}
           config-file: .github/release-please-config.json
-          manifest-file: .github/.release-please-manifest.json
-          command: manifest-pr
+          
       # - uses: actions/checkout@v3
       # - name: Close, reopen and auto-merge PR, to trigger all necessary checks (https://github.com/googleapis/release-please/issues/922)
       #   if: steps.release.outputs.pr
