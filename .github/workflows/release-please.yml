@@ -14,6 +14,10 @@ name: release-please
 jobs:
   release-please:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      id-token: write
     steps:
       - name: Debug
         run: ls
@@ -24,13 +28,23 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           config-file: .github/release-please-config.json
           manifest-file: .github/.release-please-manifest.json
-          command: manifest-pr
-      - name: Close, reopen and auto-merge PR, to trigger all necessary checks (https://github.com/googleapis/release-please/issues/922)
-        if: steps.release.outputs.pr
+          command: manifest
+          release-type: node
+      # - name: Close, reopen and auto-merge PR, to trigger all necessary checks (https://github.com/googleapis/release-please/issues/922)
+      #   if: steps.release.outputs.pr
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     pr_number: "${{ steps.release.outputs.pr && toJSON(fromJSON(steps.release.outputs.pr).number) }}"
+      #     pr_title: '[UI] Automatic Release'
+      #   shell: bash
+      #   run: |
+      #     gh pr merge -R ${{ github.repository }} --merge --auto ${{ env.pr_number }} -b "" -t '⇄ PR-#${{ env.pr_number  }} | ${{ env.pr_title }}'
+      - name: Workaround for https://github.com/googleapis/release-please/issues/922
+        if: ${{ steps.release.outputs.pr != '' }}    
+        run: |
+          echo "Closing and reopening PR to trigger checks"
+          gh pr close ${{ fromJSON(steps.release.outputs.pr).number }} || true
+          gh pr reopen ${{ fromJSON(steps.release.outputs.pr).number }} || true
+          gh pr merge --auto --merge ${{ fromJSON(steps.release.outputs.pr).number }} || true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          pr_number: "${{ steps.release.outputs.pr && toJSON(fromJSON(steps.release.outputs.pr).number) }}"
-          pr_title: '[UI] Automatic Release'
-        shell: bash
-        run: |
-          gh pr merge -R ${{ github.repository }} --merge --auto ${{ env.pr_number }} -b "" -t '⇄ PR-#${{ env.pr_number  }} | ${{ env.pr_title }}'
