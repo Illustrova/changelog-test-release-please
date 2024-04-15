@@ -1,13 +1,13 @@
 {
-    "release-type": "node",
-    "tag-separator": "@",
-    "include-v-in-tag": false,
-    "pull-request-title-pattern": "PLATFORM-888: Automatic release of ManyUI: ${scope} ${component} ${version}",
-    "pull-request-footer": " ",
-    "pull-request-header": " ",
-    "target-branch": "dev",
-    "packages": {
+  "packages": {
     "packages/ui": {
+      "release-type": "node",
+      "tag-separator": "@",
+      "include-v-in-tag": false,
+      "pull-request-title-pattern": "PLATFORM-888: Automatic release of ManyUI: ${scope} ${component} ${version}",
+      "pull-request-footer": " ",
+      "pull-request-header": " ",
+      "target-branch": "dev",
       "changelog-path": "CHANGELOG.md",
       "component": "ui",
       "changelog-sections": [
