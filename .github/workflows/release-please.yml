@@ -34,4 +34,4 @@ jobs:
         run: |
           gh pr close ${{ env.pr_number }} || true
           gh pr reopen ${{ env.pr_number }} || true
-          gh pr merge -R ${{ github.repository }} --remove-label \"autorelease: pending\" --merge --auto ${{ env.pr_number }} -b "" -t '⇄ PR-#${{ env.pr_number  }} | ${{ env.pr_title }}'
+          gh pr merge -R ${{ github.repository }} --merge --auto ${{ env.pr_number }} -b "" -t '⇄ PR-#${{ env.pr_number  }} | ${{ env.pr_title }}'
